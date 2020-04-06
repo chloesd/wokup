@@ -1,0 +1,356 @@
+html {
+	 border-style: solid;
+		border-color:#487A24;
+		border-width: 15px;
+}
+
+* {
+	font-family: Calibri Light, sans-serif;
+	background-color:#F6FDF1;
+	color:#43330C;
+	/*rgb(255, 242, 204);
+	rgb(255, 238, 230)*/
+}
+
+header {
+	text-align: center;
+	position:fixed; /* Fixed position - sit on top of the page */
+	margin-left: -0.5em;
+	top: 15px;
+	width: 97.7%; /* Full width */
+	transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+	z-index: 10;
+
+}
+
+
+h1 {
+	display:inline-block;
+	vertical-align:middle;
+	font-family:Ink Free;
+ font-weight:bolder;
+	font-size: 55px;
+	color: #43330C;
+}
+
+header #titleImg{
+	display:inline-block;
+	vertical-align:middle;
+	width:7%;
+	/*background-color: #DFD4B9;*/
+}
+
+h2 {
+	padding: 2px;
+	font-size: 24px;
+	text-align:center;
+}
+
+
+/*---------Description-----*/
+
+
+.description{
+ border-style: ridge;
+	border-width: thin;
+	border-radius:1em;
+ margin-right: 5em;
+ margin-top: 10em;
+	margin-left: 5em;
+ padding: 10px;
+	animation: 3s fadeIn;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.description .title{
+ font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/*-------- Calendar and Recipe sections --------*/
+
+.grid-container {
+  display: grid;
+		grid-template-columns: 20% 40% 40%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "calendar calendar calendar"
+    "restrictions list  recipe"
+    "footer footer footer ";
+
+}
+.calendar{
+	grid-area: calendar;
+	margin-left: 5em;
+}
+
+.calendar .btn_calendar{
+ margin-top: 2em;
+	margin-left: 1em;
+}
+
+/* Buttons style */
+
+.calendar .btn {
+  margin: 0 0.3em 0.3em 0;
+  padding: 10px 0;
+  background-color:#E6F7D9;
+		border:0.1em solid #487A24;
+		border-radius:0.12em;
+		box-sizing: border-box;
+  display:inline-block;
+		text-decoration:none;
+  width: 93px;
+		font-weight:300;
+  color: #DFD4B9;
+  text-align: center;
+		float: left;
+		transition: all 0.2s;
+}
+/*
+.calendar .btn {
+	border: bold;
+	color: black;
+	padding: 12px 25px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 1px;
+	float:none;
+ align-items: center;
+
+}**/
+
+
+/* Darker background on mouse-over */
+
+.calendar .btn:hover {
+	background-color:  #315219;
+}
+
+.calendar .btn span {
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+		background-color:#E6F7D9;
+		/*background-color: rgb(224, 224, 209);*/
+		color: #487A24;
+		font-size: 17px;
+}
+
+.calendar .btn:hover span {
+ background-color:  #315219;
+	color: #FFFFFF;
+  /*padding-right: 25px;*/
+}
+
+.calendar .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*-------Health and Diet restrictions -----*/
+
+.health-restrictions{
+	grid-area: restrictions;
+	margin-top: 1em;
+	margin-left: 5em;
+}
+
+.health-restrictions input[type=submit] {
+	background-color:#F6FDF1;
+	border-radius:8px;
+	box-sizing: border-box;
+	text-decoration:none;
+}
+
+.health-restrictions input[type=submit]:hover {
+	background-color: #CEE3BF;
+}
+
+/*-------Fruits and Vegetables lsit -----*/
+
+.grid-container .fruit-vege-list{
+	grid-area: list;
+ margin: auto;
+	text-align: center;
+	display: block;
+}
+
+.fruit-vege-list figure.item {
+				margin-top: 2em;
+    /* To correctly align image, regardless of content height: */
+    vertical-align:middle;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 10px;
+}
+.fruit-vege-list img {
+    width: 45px;
+    height: 45px;
+}
+
+.fruit-vege-list button {
+	background-color:#E6F7D9;
+	border-radius:8px;
+	box-sizing: border-box;
+	text-decoration:none;
+}
+
+.fruit-vege-list button:hover {
+	background-color: #CEE3BF;
+}
+
+/*--------------Recipe Style----------*/
+.recipe {
+	grid-area: recipe;
+}
+.recipe h2 {
+	margin-left: -1em;
+}
+
+.recipe .recipe-default {
+			margin-top:13em;
+			text-align: center;
+		}
+
+
+	.recipe .label{
+			text-align: center;
+		}
+
+		.recipe .recipe-label{
+			text-align: left;
+		}
+
+		.recipe .label div{
+			display: inline-block;
+			vertical-align: middle;
+			padding-right: 30px;
+		}
+
+
+.recipe-details{
+	margin-top: 20px;
+	margin-left: 15%;
+	margin-right: 15%
+	display: block;
+	margin-bottom: 15px;
+	line-height: 46px;
+		}
+
+.recipe-details th {
+  text-align: left;
+}
+
+.recipe-details button {
+	background-color:#E6F7D9;
+	border-radius:8px;
+	box-sizing: border-box;
+	text-decoration:none;
+}
+
+.recipe-details button:hover {
+	background-color: #CEE3BF;
+}
+
+/*-------------------Modal Style ----------------*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #CEE3BF;
+  margin: auto;
+		font-weight: bold;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 35%;
+}
+.modal-content p {
+	background-color: #CEE3BF;
+	text-align: center;
+	font-size: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+		background-color: #CEE3BF;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*-------------Nutrition table ---------*/
+
+h3 {
+	padding: 2px;
+	font-size: 16px;
+
+}
+
+#nutritionTable{
+	display: none;
+	background-color:#E6F7D9;
+}
+
+
+.nutrients-table{
+	border:15px;
+	text-transform: uppercase;
+	background-color:grey;
+	font-size: 14px;
+	text-align: center;
+
+}
+.nutrients-table tr:nth-child(even) {
+	background-color: #315219;
+}
+
+
+.ui-tooltip {
+		padding: 10px 20px;
+		border-radius: 20px;
+		box-shadow: 0 0 7px black;
+		float:right;
+		background-color:#E6F7D9;
+}
+
+/*-----------------Copyright-----------------*/
+.copyright{
+	font-size: 10px;
+	font-style: italic;
+}
