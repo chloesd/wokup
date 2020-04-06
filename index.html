@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wok Up</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="wokup.css">
+    <script type="text/javascript" src="wokup.js"></script>
+    <link rel="icon" type="image/png" href="spatula.png">
+  </head>
+  <body onload="resetForm()" onscroll="scrollFunction()">
+
+
+   <!-- Header  -->
+    <header id="header">
+				 <h1 id="h1"> Wok Up!</h1>
+				 <img src='spatula.png' id='titleImg'/>
+    </header>
+
+    <!--Description of the website-->
+    <section class="description">
+        <h2>Why is it better to eat local and seasonal?</h2>
+        <ul>
+          <li> <span class='title'> To take advantage of nutritional benefits:</span> <br> Each season responds to a need of the human body. In summer, with the heat, our body expends fewer calories but requires more water: all the fruits and vegetables of the season are bursting with it: melons, tomatoes, courgettes, watermelons, etc. <br> <br> </li>
+          <li> <span class='title'> To favour local fruits and vegetables: </span> <br> Imported fruit and vegetables mature during transport! <br> <br>  </li>
+          <li> <span class='title'> To have a less polluting impact: </span> <br> The closer the fruits and vegetables have been produced to your home, the better it will be for limiting your carbon impact and the less likely they will have been grown in greenhouses. <br> <br> </li>
+          <li> <span class='title'> To support local farming: </span> <br> Eating local means finding fruits and vegetables that have taste, nutritional richness and vitamins while encouraging the emergence of local producers. <br> <br> </li>
+        </ul>
+     </section>
+
+     <section class="grid-container">
+
+
+     <!--Calendar-->
+      <section class="calendar">
+        <h2>Calendar </h2>
+        <section class="btn_calendar">
+ 								<button class="btn" id="jan" onclick="jan_list();"> <span> January  </span></button>
+ 								<button class="btn" id="feb" onclick="feb_list();"> <span> February </span></button>
+ 								<button class="btn" id="mar" onclick="mar_list();"> <span> March </span></button>
+ 								<button class="btn" id="apr" onclick="apr_list();"> <span> April </span></button>
+ 								<button class="btn" id="may" onclick="may_list();"> <span> May </span></button>
+ 								<button class="btn" id="jun" onclick="jun_list();"> <span> June </span></button>
+ 								<button class="btn" id="jul" onclick="jul_list();"> <span> July </span></button>
+ 								<button class="btn" id="aug" onclick="aug_list();"> <span> August </span></button>
+ 								<button class="btn" id="sep" onclick="sep_list();"> <span> September </span></button>
+ 								<button class="btn" id="oct" onclick="oct_list();"> <span> October </span></button>
+ 								<button class="btn" id="nov" onclick="nov_list();"> <span> November </span></button>
+ 								<button class="btn" id="dec" onclick="dec_list();"> <span> December </span></button>
+ 							</section>
+								</section>
+
+
+							<section class="health-restrictions">
+								<form id="health" method="post" action="">
+									<fieldset>
+										<legend>Do you have any food restrictions?</legend>
+										<input type="radio" name="health" value="none">None<br>
+										<input type="radio" name="health" value="dairy-free">Dairy-free<br>
+        		<input type="radio" name="health" value="gluten-free">Gluten-free<br>
+        		<input type="radio" name="health" value="low-sugar">Low-Sugar<br>
+										<input type="radio" name="health" value="vegan">Vegan<br>
+										<input type="radio" name="health" value="vegetarian">Vegetarian<br>
+        		<br>
+        		<input type="submit" value="Submit now" onclick="healthRestriction()" />
+									</fieldset>
+								</form>
+
+								<form id="diet" method="post" action="">
+									<fieldset>
+										<legend>Do you have a specific diet? </legend>
+										<input type="radio" name="diet" value="none">None<br>
+										<input type="radio" name="diet" value="balanced">Balanced<br>
+										<input type="radio" name="diet" value="high-fiber">High-Fiber<br>
+										<input type="radio" name="diet" value="high-protein">High-Protein<br>
+										<input type="radio" name="diet" value="low-carb">Low-Carb<br>
+										<input type="radio" name="diet" value="low-fat">Low-Fat<br>
+										<input type="radio" name="diet" value="low-sodium">Low-Sodium<br>
+										<br>
+										<input type="submit" value="Submit now" onclick="dietRestriction()" />
+									</fieldset>
+
+							</section>
+
+
+
+        <section id="fruit-vege-list" class="fruit-vege-list">
+									Click on a month to get the corresponding vegetables and fruits list
+         <div class="vege-list">
+         </div>
+         <div class="fruit-list">
+         </div>
+        </section>
+
+        <section class="recipe">
+									<div class="recipe-default">
+										Click on one vegetable or one fruit to get a recipe!
+									</div>
+									<!-- The Modal -->
+									<div id="modalNoRecipe" class="modal">
+										  <!-- Modal content -->
+												<div class="modal-content">
+													<span class="close">&times;</span>
+													<p>No recipes...! <br/> Change your filters!</p>
+												</div>
+									</div>
+        </section>
+
+
+
+      </section>
+
+
+    <footer>
+      <address> <br/> Copyright Chloé Side </address>
+						<div class='copyright'>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+  </body>
+</html>
