@@ -167,14 +167,14 @@ h2 {
 	margin-left: 5em;
 }
 
-.health-restrictions input[type=submit] {
+.health-restrictions button[type=button] {
 	background-color:#F6FDF1;
 	border-radius:8px;
 	box-sizing: border-box;
 	text-decoration:none;
 }
 
-.health-restrictions input[type=submit]:hover {
+.health-restrictions button[type=button]:hover {
 	background-color: #CEE3BF;
 }
 
